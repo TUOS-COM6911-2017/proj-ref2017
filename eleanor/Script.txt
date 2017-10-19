@@ -1,0 +1,35 @@
+Slide 1: Intro
+
+The REF is a system devised to aid in allocating public funding to universities which display the highest quality of research. 
+It is the successor to the RAE (research assessment exercise) and the results for the first evalutation were published in 2014. 
+The next evaluation will be in 2021.
+Universities submit published papers for evaluation during a 5-7 year time period. 
+The papers submitted must have been published after the previous REF, or RAE in the case of the first REF evaluation.
+The papers are graded manually by expert panels according 3 criteria; Output, Impact and Environment. Output is the **** and makes up *** of the overall grade, 
+Impact is **** and makes up **** of the overall grade, finally environment is ***** and makes up 15% of the overall grade. 
+There are 4 possible grades for a paper to recieve, 4* being the highest and 1* being the lowest. 
+If a paper fails to reach the criteria for 1* it is given an U/C, or unclassified grade.
+
+Slide 2: Aims
+
+Our aim is to identify possible factors that could affect the grades the REF assigns, so that we can understand how to get the best possible ranking from the REF. 
+We would also hope to use the previous year's results and any variables we identified that affect REF ranking to create a model to predict possible future results, 
+which could help with the grading process, as currently it is done manually and is labour expensive.
+
+Slide 3: Approach
+
+To achieve our goals we have broken down the process into 5 steps. 
+
+The first step is understanding exactly what our task is; learning and understanding what REF and 
+RAE are and a quick overview of the data we have access to as we begin to think about what could affect how someone would rate a paper. We may 
+
+The second step is where we take the data we looked at earlier and begin to process it for use in statistical packages later on. 
+We extract and "clean" the data using programs such as Python or Excel. 
+### Does Perform simple statistics belong in the preparing the data section? To do any statistical tests you've already made a hypothesis! ###
+
+The third stage is where we solidly define our hypotheses; what factors we think could affect the grading of the REF, which have been identified as points of interest in previous literature on this subject, and how the best manner to test these hypotheses.
+
+After soundly defining our various hypotheses we then test these 
+In timeline section mention what we have already done
+We may also take 
+To achieve our aims we plan to employ a variety of software and packages, including R, Excel, and Python.
