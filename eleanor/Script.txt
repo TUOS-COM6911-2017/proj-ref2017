@@ -6,63 +6,56 @@ This is our industrial team project, it is about the REF.
 🐁
 Slide 2: Intro
 
-The REF is a system devised to aid in allocating public funding to universities which display the highest quality of research. 
-It is the successor to the RAE (research assessment exercise) and the results for the first evalutation were published in 2014. 
-The next evaluation will be in 2021.
-Universities submit published papers for evaluation during a 5-7 year time period. 
-The papers submitted must have been published after the previous REF, or RAE in the case of the first REF evaluation.
-The papers are graded manually by expert panels according 3 criteria; Output, Impact and Environment. Output is the basic quality of the academic work 
-and makes up 65% of the overall grade.
-Impact measures the positive effects of the universities research beyond academia and makes up 20% of the overall grade.
-Finally environment is a measure of the quality of the research department and makes up 15% of the overall grade. 
-There are 4 possible grades for a paper to recieve, 4* being the highest and 1* being the lowest. 
-If a paper fails to reach the criteria for 1* it is given an U/C, or unclassified grade.
+So, what is the REF?
+It's a system devised to aid in allocating public funding to universities which display the highest quality of research.  It is the successor to the RAE (research assessment exercise) and the results for the first evalutation were published in 2014, the next evaluation will be in 2021.
+Universities submit published papers for evaluation during a 5-7 year time period, and the papers submitted must have been published after the previous REF, or RAE in the case of the first REF evaluation.
+The papers are graded manually by expert panels according 3 criteria; Output, Impact and Environment. Output is the basic quality of the academic work and makes up 65% of the overall grade, impact measures the positive effects of the universities research beyond academia and makes up 20% of the overall grade. Finally environment is a measure of the quality of the research department and makes up 15% of the overall grade.  There are 4 possible grades for a paper to recieve, 4* being the highest and 1* being the lowest. If a paper fails to reach the criteria for 1* it is given an U/C, or unclassified grade.
 🐁
 Slide 3: Aims
 
-Our aim is to identify possible factors that could affect the grades the REF assigns, so that we can understand how to get the best possible ranking from the 
-REF, this is important as . 
-We would also hope to use the previous year's results and any variables we identified that affect REF ranking to create a model to predict possible future 
-results, which could help with the grading process, as currently it is done manually and is labour expensive.
+Our aim is to identify possible factors that could affect the grades the REF assigns, so that we can understand how to get the best possible ranking from the REF, this is important as a higher REF means more funding for research. 
+We would also hope to use the previous year's results and any variables we identified that affect REF ranking to create a model to predict possible future results, which could help with the grading process, as currently it is done manually and is labour expensive.
 🐁
 Slide 4: Approach
 
 To achieve our goals we have broken down the process into 5 steps. 
 🐁
-The first step is understanding exactly what our task is; learning and understanding what REF and 
-RAE are, how they are similar, how they are different;
-and a quick overview of the data we have access to, so we know what kind of data we have available. 
+The first step is understanding exactly what our task is; learning and understanding what REF and RAE are, how they are similar, how they are different; and a quick overview of the data we have access to, so we know what kind of data we have available. 
 We also begin to investigate how the REF judge each paper as we begin to think about what factors could affect how someone would rate a paper. 
 🐁
 The second step is where we take the data we looked at earlier and begin to process it for use in statistical packages later on. 
-We extract and "clean" the data using programs such as Python or Excel. 
-We may perform some simple tests on the data to gain a better understanding of which direction we should go with the later tests.
+We extract and "clean" the data using programs such as Python or Excel, we may also perform some simple tests on the data to gain a better understanding of which direction we should go with the later tests.
 🐁
-The third stage is where we solidly define our hypotheses; what factors we think could affect the grading of the REF, 
-which have been identified as points of interest in previous literature on this subject, and how to best test these hypotheses. 
+The third stage is where we solidly define our hypotheses; what factors we think could affect the grading of the REF, which have been identified as points of interest in previous literature on this subject, and how to best test these hypotheses. 
 🐁
 After soundly defining our various hypotheses we then test them using our clean and prepared data. 
-In this stage we may need to further prepare the data if it is not all readily available on the same dataset.
-If we identify any correlations or significant differences that seem particuarlly interesting we will investigate those even further.
+In this stage we may need to further prepare the data if it is not all readily available on the same dataset, If we identify any correlations or significant differences that seem particuarlly interesting we will investigate those even further.
 🐁
 The final stage will be when we gather all our results and analyse them. 
 We will see if the results are similar or different to those found in previous similar studies, and identify why or why not they are similar.
 This is the stage where we will also be fully writing up our report, bringing together the actions we performed in all the previous stages in one single concise document.
-If we have any available time after writing the report we will attempt to create a model to predict the REF grades, 
-using any data sets that we did not use in our hypothesis testing stage to check the strength of the model.
+If we have any available time after writing the report we will attempt to create a model to predict the REF grades, using any data sets that we did not use in our hypothesis testing stage to check the strength of the model.
 🐁
 
 Slide 5: Timeline
-*Need to write, but it will be about the timescale of our project in terms of dates and such. 
-I will probably edit my old version of my script for this, the one available on the wiki which I just realised I should upload now*
+
+As I mentioned, our approach to this project is broken up into 5 main stages, with a array of tasks to be completed within them, and a 6th stage, which is writing the report up. 
+We hope that the first stage, understanding the task, will take us at most 2 weeks and be finished by 26th Oct. The Data Preperation stage started just over a week after the first stage and will last until the 3rd of November. There will be some slight overlap between the first stage and this one, however it should not cause any delays.
+The third stage, defining the hypotheses, is the shortest stage, lasting a single week, from the 3rd to the 10th. The longest stage, testing the hypotheses, comes directly after it, lasting 22 days, ending on the 2nd of December. 
+The final stage starts during the testing hypothesis stage, on the 23rd, and lasts until the 4th of december, as by then we would hope to be able to fully focus on the report or possibly the model.
+The report writing stage isn't considered one of the main stages, as it begins during the defining hypothesis stage, lasts until the end of the project and is being worked on constantly in the background during that time period.
+
 🐁
 
 Slide 6: What we have done
-*Need to write, at the end I will probably say what each member of the group's job in the group is here.*
+
+So far we have accomplished various tasks. We've been able to understand what exactly the REF is, what it does and why it is important, we've extracted most of the data avaialble from the REF website and began to sort and clean it, as well as starting to read into previous studies and articles regarding the REF, building a reference list for use later on.
+We have also started to theorize possible ways to construct the model to predict REF grades.
+🐁
+
+Slide 7: Role Allocation within the group
+
+This is how we've decided each of us will most focus our efforts initially, as these categories are our individual strengths, however we will all be doing parts of the other tasks as well. This is just a display of how we have decided to create the stage around our strengths as a group, and how we will focus on areas that are our strengths.
 🐁
 End! 
 🐁💨 🐈
-
-
-
-
