@@ -1,0 +1,27 @@
+# This extracts all the links to individual output detail page ###################
+import os
+import sys
+from bs4 import BeautifulSoup
+import re
+#import urllib2
+import requests
+
+os.chdir("/media/glorwlin/0C98231C982303B4/REF")
+
+all_url = []
+#infile = open('cs_aston.txt','r')
+output_details = open('output_details.txt', 'w')
+
+page = requests.get("http://results.ref.ac.uk/Submissions/OutputsList/2006")
+#html_page = urllib2.urlopen("http://results.ref.ac.uk/Submissions/OutputsList/2006")
+soup = BeautifulSoup(page)
+for a in soup.findAll('a', href=True):
+    all_url.append(a['href'])
+#next_page_re = re.compile('/Page')
+output_title_re = re.compile('/Submissions/Output/')
+for element in all_url:
+    if output_title_re.search(element):
+        print('http://results.ref.ac.uk', element,sep = '', end = '\n', file = output_details)
+        
+#infile.close()                          
+output_details.close() 
