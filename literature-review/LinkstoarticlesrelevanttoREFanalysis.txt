@@ -1,0 +1,11 @@
+
+
+Article on the panel and subpanels of the REF and possible errors in the exercise:
+
+http://blogs.lse.ac.uk/impactofsocialsciences/2016/03/22/ref2014-and-computer-science-and-informatics-subpanel/
+
+Article which mentions why metrics might never replace peer review for REF: https://www.chemistryworld.com/news/can-research-quality-be-predicted-by-metrics/8077.article
+
+Article on REF metrics vs peer review: http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0179722
+
+Detailed study for impact analysis - through text mining and synthetic analysis: http://www.hefce.ac.uk/pubs/rereports/Year/2015/analysisREFimpact/
