@@ -1,0 +1,87 @@
+Downloading data and cleaning - filtering noise
+    The same journal might have different acronyms/ referred in different ways
+Find out common field for both data
+    Different unis have different research interests - need to find common field for all unis
+Look at extra data to find out correlations
+
+To find out a shortcut for the data cleaning process - a prediction
+Number of people in department - level of goodness of department
+Think about any any possible fact that may contribute to research quality
+
+All data is available online
+Linux
+Github will be available this week
+
+Pure data analytics
+Text is the main material
+    Counting words
+    Computing correlations
+    Low level required
+Natural language processing
+
+Data processing and management
+
+ML
+    Clustering
+    Grouping
+
+REF 2014
+RAE 2008
+    Rules are different
+    Identify the difference - cross correlation
+
+Unit of assessment
+    Department - different uni have different departments
+    Tried to be equal size but can be different
+
+Submission guidelines
+
+Individual score -- accumulated score
+
+Impact & environments - pure text data
+
+Output - more information
+
+Submit 4 papers per person (staff member) - to research output
+    If not employed for the whole duration of ref, one can submit less than 4
+    Paper submitted has to be unique
+    Paper submitted has to be within the period of ref
+
+Harvest webpage for information
+
+List of paper with brief infor
+Field of each paper - important information in abstract - no more than 100 words
+
+What attributes of individual publication that contribute to scores
+
+Correlations between disciplines, or difference
+
+Data cleaning and organisation is the first step - data quality 
+    Recording step - trace mistakes
+    Intelligent methods can be deployed
+    Data processing companies have a separate team for data organisation
+
+Title of journal is an important attributes
+    E.g. IEEE, Nature
+    Impact factors - how many citations the paper has been referred to
+        But the number is not meaningful outside the field
+        Only relative number between fields is important
+        Impact factor variation over time
+        Tells how good a paper is in various relevant fields
+
+Harvest a selection of data
+
+Find out how good a journal/conference is - additional data:
+Web of science - ignores conferences
+Google metrics - assessing all conferences and paper
+Core conference - assessing conference, stopped assessing papers
+
+Basic natural language processing
+Cluster analysis
+Text analysis
+Automatic assessment of paper for a specific subject
+
+One of the predictors - 
+quality of journal/conference
+    Text 
+One of predictors - reading paper - NOT POSSIBLE
