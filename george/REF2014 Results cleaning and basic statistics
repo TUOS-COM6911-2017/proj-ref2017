@@ -1,0 +1,41 @@
+import pandas as pd
+import xlrd
+from openpyxl import load_workbook
+import numpy as np
+
+# Open the excel file
+ref_gen = pd.read_excel("/home/kokos/Desktop/Msc Data Analytics/COM6911 Industrial Project/REF2014 Results.xlsx")
+
+# Remove irrelevant mistaken rows
+ref_gen = ref_gen.drop(ref_gen.index[[0,1,2,3,4,5]])
+
+# Replace header with what was in row 4(which are the headers)
+new_header = ref_gen.iloc[0]
+ref_gen = ref_gen[1:]
+ref_gen.columns = new_header
+
+# Make columns easily codeable by name
+ref_gen = ref_gen.rename(columns = {"Institution code (UKPRN)":"inst_code", "Institution name":"inst_name", "Institution sort order":"inst_sort", "Main panel":"main_panel", "Unit of assessment number":"unit_asses_num"}) 
+ref_gen = ref_gen.rename(columns = {"Unit of assessment name":"unit_asses_name", "Multiple submission letter":"mult_sub_let", "Multiple submission name":"mult_sub_name"}) 
+ref_gen = ref_gen.rename(columns = {"Joint submission":"joint_sub", "Profile":"profile", "FTE Category A staff submitted":"fte_cata"}) 
+ref_gen = ref_gen.rename(columns = {"4*":"four_str", "3*":"three_str", "2*":"two_str", "1*":"one_str"})
+
+# Drop unwanted columns
+ref_gen.drop(["mult_sub_let","mult_sub_name", "joint_sub"], axis = 1, inplace = True)
+
+# Create a new data frame containing only overall scores
+
+ref_gen_overall = ref_gen[ref_gen["profile"].str.contains("Overall")]
+
+# Try and isolate universities in to their own dataframes to make it easier to compare
+# # first identify unique codes of the universities
+uniq_univ = ref_gen_overall["inst_code"].unique()
+
+
+four_s_list = []
+for code in uniq_univ:
+    sums = ref_gen_overall.four_str[ref_gen_overall.inst_code==code].mean()
+    four_s_list.append(sums)
+    
+import matplotlib.pyplot as plt    
+plt.plot(uniq_univ, four_s_list)
