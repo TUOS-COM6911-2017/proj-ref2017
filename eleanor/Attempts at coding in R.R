@@ -1,4 +1,5 @@
-OnlyOverall=subset(OnlyOverall, Profile!="Outputs")
+# To make a dataset containing only the overall scores
+OnlyOverall=subset(Initial_Test, Profile!="Outputs") # Initial_Test is the file from REF2014
 OnlyOverall=subset(OnlyOverall, Profile!="Impact")
 OnlyOverall=subset(OnlyOverall, Profile!="Environment")
 
