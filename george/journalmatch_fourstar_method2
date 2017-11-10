@@ -1,0 +1,69 @@
+import pandas as pd
+import numpy as np
+from fuzzywuzzy import fuzz
+from fuzzywuzzy import process
+import difflib
+## Stats on Output and Citation
+
+# Load and clean the output file
+aujour_or = pd.read_csv("2010AJR.csv")
+
+aujour_or = aujour_or.drop(aujour_or.columns[[0]], axis=1)
+aujour_or = aujour_or.drop(aujour_or.columns[[range(2,12)]], axis=1)
+
+rankingdic = {}
+
+for index, row in aujour_or.iterrows():
+    rankingdic[row["Title"]] = row["Rank"]
+    
+stop =  [":", ",", "0", "1", "2","3","4","5","6","7","8","9"]
+
+
+
+
+aujour_or = aujour_or.rename(columns = {"Title":"VolumeTitle"})
+
+aujour_or["VolumeTitle"] = aujour_or.VolumeTitle.str.lower()
+
+aujour_or["VolumeTitle"] = aujour_or.VolumeTitle.str.replace(r'(\w{2,})s\b', r'\1')
+aujour_or["VolumeTitle"] = aujour_or.VolumeTitle.str.replace('\d+', '')
+aujour_or["VolumeTitle"] = aujour_or.VolumeTitle.str.replace(':', '')
+aujour_or['VolumeTitle'] = aujour_or['VolumeTitle'].astype(str)
+aujour_or
+
+refcs_or = pd.read_csv("REF2014Dataoutput.csv")
+
+refcs_or = refcs_or.drop(refcs_or.columns[[1,2,3,6,7]], axis=1)
+refcs_or = refcs_or.drop(refcs_or.columns[[range(4,29)]], axis=1)
+refcs_or = refcs_or.drop(refcs_or.columns[[1,2,4]], axis=1)
+
+refcs_or["VolumeTitle"] = refcs_or.VolumeTitle.str.lower()
+refcs_or['VolumeTitle'] = refcs_or.VolumeTitle.str.replace(r'(\w{2,})s\b', r'\1')
+refcs_or['VolumeTitle'] = refcs_or.VolumeTitle.str.replace('\d+', '')
+refcs_or['VolumeTitle'] = refcs_or.VolumeTitle.str.replace(':', '')
+refcs_or['VolumeTitle'] = refcs_or['VolumeTitle'].astype(str)
+refcs_or
+merged_df = refcs_or.merge(aujour_or, how = 'inner', on = ['VolumeTitle'])
+
+merged_df
+
+refcs = refcs_or.set_index(["VolumeTitle"])
+aujour = aujour_or.set_index(["VolumeTitle"])
+import jellyfish
+
+def get_closest_match(x, list_strings):
+
+  best_match = None
+  highest_jw = 0
+
+  for current_string in list_strings:
+    current_score = jellyfish.jaro_winkler(x, current_string)
+
+    if(current_score > highest_jw):
+      highest_jw = current_score
+      best_match = current_string
+
+  return best_match
+
+
+refcs.index = refcs.index.map(lambda x: get_closest_match(x, aujour.index))
