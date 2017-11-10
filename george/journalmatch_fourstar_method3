@@ -1,0 +1,106 @@
+import pandas as pd
+import numpy as np
+from fuzzywuzzy import fuzz
+from fuzzywuzzy import process
+import difflib
+## Stats on Output and Citation
+
+# Load and clean the output file
+aujour_or = pd.read_csv("2010AJR.csv")
+
+aujour_or = aujour_or.drop(aujour_or.columns[[0]], axis=1)
+aujour_or = aujour_or.drop(aujour_or.columns[[range(2,8)]], axis=1)
+
+
+aujour_or = aujour_or.rename(columns = {"Title":"VolumeTitle"})
+aujour_or["ISSN1"] = aujour_or.ISSN1.str.replace('X', '')
+aujour_or["ISSN2"] = aujour_or.ISSN2.str.replace('X', '')
+aujour_or["ISSN3"] = aujour_or.ISSN3.str.replace('X', '')
+aujour_or["ISSN4"] = aujour_or.ISSN4.str.replace('X', '')
+#aujour_or["ISSN"] = aujour_or.ISSN.str.replace('-', '')
+aujour_or
+
+refcs_or = pd.read_csv("REF2014Dataoutput.csv")
+
+refcs_or = refcs_or.drop(refcs_or.columns[[1,2,3,6,7]], axis=1)
+refcs_or = refcs_or.drop(refcs_or.columns[[range(10,29)]], axis=1)
+refcs_or = refcs_or.drop(refcs_or.columns[[1,2,4,5,6,7,8,10]], axis=1)
+refcs_or["ISSN"] = refcs_or.ISSN.str.replace('X', '')
+#refcs_or["ISSN"] = refcs_or.ISSN.str.replace('-', '')
+
+refcs_or
+
+ajourone = {}
+for index, row in aujour_or.iterrows():
+    ajourone[row["ISSN1"]] = row["Rank"]
+
+len(ajourone)
+
+ajourtwo = {}
+for index, row in aujour_or.iterrows():
+    ajourtwo[row["ISSN2"]] = row["Rank"]
+
+len(ajourtwo)
+
+ajourthree = {}
+for index, row in aujour_or.iterrows():
+    ajourthree[row["ISSN3"]] = row["Rank"]
+
+len(ajourthree)
+
+ajourfour = {}
+for index, row in aujour_or.iterrows():
+    ajourfour[row["ISSN4"]] = row["Rank"]
+
+len(ajourfour)
+
+ref = {}
+for index, row in refcs_or.iterrows():
+    indexs = index
+    ref[index] = row["ISSN"]
+    
+len(ref)
+
+ranklistone = {}
+
+for index in ref:
+    for issn in ajourone:
+        if issn == ref[index]:
+            ranklistone[index] = ajourone[issn]
+            
+ranklisttwo = {}
+
+for index in ref:
+    for issn in ajourtwo:
+        if issn == ref[index]:
+            ranklisttwo[index] = ajourtwo[issn]
+ranklistthree = {}
+
+for index in ref:
+    for issn in ajourthree:
+        if issn == ref[index]:
+            ranklistthree[index] = ajourthree[issn]
+ranklistfour= {}
+
+for index in ref:
+    for issn in ajourfour:
+        if issn == ref[index]:
+            ranklistfour[index] = ajourfour[issn]
+            
+ranklistfour
+
+ref_rankd = refcs_or
+ref_rankd["Rank1"] = pd.Series(ranklistone)
+ref_rankd["Rank2"] = pd.Series(ranklisttwo)
+ref_rankd["Rank3"] = pd.Series(ranklistthree)
+ref_rankd["Rank4"] = pd.Series(ranklistfour)
+
+ref_rankd.loc[ref_rankd['Rank1'].isnull(),'Rank1'] = ref_rankd['Rank2']
+ref_rankd.loc[ref_rankd['Rank1'].isnull(),'Rank1'] = ref_rankd['Rank3']
+ref_rankd.loc[ref_rankd['Rank1'].isnull(),'Rank1'] = ref_rankd['Rank4']
+
+ref_rankd = ref_rankd.drop(["ISSN", "Rank2", "Rank3", "Rank4"], axis = 1)
+
+count_nan = len(ref_rankd) - ref_rankd.count()
+
+ref_rankd
