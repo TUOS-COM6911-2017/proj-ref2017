@@ -1,0 +1,81 @@
+import pandas as pd
+import numpy as np
+from fuzzywuzzy import fuzz
+from fuzzywuzzy import process
+import difflib
+## Stats on Output and Citation
+
+# Load and clean the output file
+aujour_or = pd.read_csv("2010AJR.csv")
+
+aujour_or = aujour_or.drop(aujour_or.columns[[0]], axis=1)
+aujour_or = aujour_or.drop(aujour_or.columns[[range(2,8)]], axis=1)
+aujour_or = aujour_or.drop(aujour_or.columns[[range(3,6)]], axis=1)
+
+aujour_or = aujour_or.rename(columns = {"Title":"VolumeTitle"})
+aujour_or = aujour_or.rename(columns = {"ISSN1":"ISSN"})
+aujour_or["ISSN"] = aujour_or.ISSN.str.replace('X', '')
+aujour_or["ISSN"] = aujour_or.ISSN.str.replace('-', '')
+aujour_or
+
+refcs_or = pd.read_csv("REF2014Dataoutput.csv")
+
+refcs_or = refcs_or.drop(refcs_or.columns[[1,2,3,6,7]], axis=1)
+refcs_or = refcs_or.drop(refcs_or.columns[[range(10,29)]], axis=1)
+refcs_or = refcs_or.drop(refcs_or.columns[[1,2,4,5,6,7,8,10]], axis=1)
+refcs_or["ISSN"] = refcs_or.ISSN.str.replace('X', '')
+refcs_or["ISSN"] = refcs_or.ISSN.str.replace('-', '')
+
+merged_df = refcs_or.merge(aujour_or, how = 'inner', on = ['ISSN'])
+
+merged_df
+
+aujour_orr = pd.read_csv("2010AJR.csv")
+
+aujour_orr = aujour_orr.drop(aujour_orr.columns[[0]], axis=1)
+aujour_orr = aujour_orr.drop(aujour_orr.columns[[range(2,9)]], axis=1)
+aujour_orr = aujour_orr.drop(aujour_orr.columns[[range(3,5)]], axis=1)
+
+aujour_orr = aujour_orr.rename(columns = {"Title":"VolumeTitle"})
+aujour_orr = aujour_orr.rename(columns = {"ISSN2":"ISSN"})
+aujour_orr = aujour_orr.dropna()
+aujour_orr["ISSN"] = aujour_orr.ISSN.str.replace('X', '')
+aujour_orr["ISSN"] = aujour_orr.ISSN.str.replace('-', '')
+aujour_orr
+
+merged_dff = refcs_or.merge(aujour_orr, how = 'inner', on = ['ISSN'])
+
+len(merged_dff)
+
+aujour_orrr = pd.read_csv("2010AJR.csv")
+
+aujour_orrr = aujour_orrr.drop(aujour_orrr.columns[[0]], axis=1)
+aujour_orrr = aujour_orrr.drop(aujour_orrr.columns[[range(2,10)]], axis=1)
+aujour_orrr = aujour_orrr.drop(aujour_orrr.columns[[3]], axis=1)
+
+aujour_orrr = aujour_orrr.rename(columns = {"Title":"VolumeTitle"})
+aujour_orrr = aujour_orrr.rename(columns = {"ISSN3":"ISSN"})
+aujour_orrr = aujour_orrr.dropna()
+aujour_orrr["ISSN"] = aujour_orrr.ISSN.str.replace('X', '')
+aujour_orrr["ISSN"] = aujour_orrr.ISSN.str.replace('-', '')
+aujour_orrr
+
+merged_dff = refcs_or.merge(aujour_orrr, how = 'inner', on = ['ISSN'])
+
+len(merged_dff)
+
+aujour_orrrr = pd.read_csv("2010AJR.csv")
+
+aujour_orrrr = aujour_orrrr.drop(aujour_orrrr.columns[[0]], axis=1)
+aujour_orrrr = aujour_orrrr.drop(aujour_orrrr.columns[[range(2,11)]], axis=1)
+
+aujour_orrrr = aujour_orrrr.rename(columns = {"Title":"VolumeTitle"})
+aujour_orrrr = aujour_orrrr.rename(columns = {"ISSN4":"ISSN"})
+aujour_orrrr = aujour_orrrr.dropna()
+aujour_orrrr["ISSN"] = aujour_orrrr.ISSN.str.replace('X', '')
+aujour_orrrr["ISSN"] = aujour_orrrr.ISSN.str.replace('-', '')
+aujour_orrrr
+
+merged_dff = refcs_or.merge(aujour_orrrr, how = 'inner', on = ['ISSN'])
+
+len(merged_dff)
