@@ -104,3 +104,100 @@ ref_rankd = ref_rankd.drop(["ISSN", "Rank2", "Rank3", "Rank4"], axis = 1)
 count_nan = len(ref_rankd) - ref_rankd.count()
 
 ref_rankd
+
+ref_rankd = ref_rankd.replace("A*", 4)
+ref_rankd = ref_rankd.replace("A", 3)
+ref_rankd = ref_rankd.replace("B", 2)
+ref_rankd = ref_rankd.replace("C", 1)
+ref_rankd = ref_rankd.replace("Not ranked", 0)
+ref_rankd
+
+## Find the average ranks to fill the nans with the mean ranks for each uni
+sum_rank = {}
+len_rank = {}
+
+rref = ref_rankd.dropna()
+
+#for index, rows in av_rankd.iterrows():
+
+for index, rows in rref.iterrows():
+    if rows["UKPRN"] not in len_rank:
+        len_rank[rows["UKPRN"]] = 1
+    else:
+        len_rank[rows["UKPRN"]] += 1
+        
+for index, rows in rref.iterrows():    
+    if rows["UKPRN"] not in sum_rank:
+        sum_rank[rows["UKPRN"]] = rows["Rank1"]
+    else:
+        sum_rank[rows["UKPRN"]] += rows["Rank1"]
+        
+av_rank = {}
+
+for univd in len_rank:
+    for univid in sum_rank:
+        if univd == univid:
+            av_rank[univd] = sum_rank[univd] / len_rank[univid]
+#
+
+indexlist = list()
+rankinglist = list()
+
+for index, row in ref_rankd.iterrows():
+    for uniid in av_rank:
+        if uniid == row["UKPRN"]:
+            indexlist.append(uniid)
+            rankinglist.append(av_rank[uniid])
+            
+ref_rankd["Rank"] = pd.Series(rankinglist)
+
+## This is the normalised ref_rankd
+ref_rankd = ref_rankd.drop(["Rank1"], axis = 1)
+
+## Now to create a dictionary with the average ranking per uni
+unijourank = dict(zip(indexlist,rankinglist))
+
+unijourank
+
+## Now to add the four star rating
+fourstr = pd.read_csv("REF2014Datasubmission.csv")
+
+
+
+fourstr = fourstr[fourstr["Profile"].str.contains("Overall")]
+fourstr = fourstr.drop(fourstr.columns[[1,2,3,5,6,7,8]], axis=1)
+
+fourstrdic = {}
+
+for index, row in fourstr.iterrows():
+    fourstrdic[row["UKPRN"]] = row["FourStar"]
+    
+rankfour = {}
+
+for uni in fourstrdic:
+    for unis in unijourank:
+        if unis == uni:
+            rankfour[unijourank[unis]] = fourstrdic[uni]
+            
+rankfour
+
+import matplotlib.pylab as plt
+%matplotlib inline
+
+lists = sorted(rankfour.items()) # sorted by key, return a list of tuples
+
+x, y = zip(*lists) # unpack a list of pairs into two tuples
+
+plt.figure(figsize = [16,10])
+plt.plot(x, y, "bo")
+plt.xlabel("Average journal rank")
+plt.ylabel("Overall 4* Rating (as percentage)")
+
+plt.savefig("jpeg")
+#plt.xscale('log')
+#plt.yscale('log')
+
+from scipy.stats.stats import pearsonr
+
+pearsonr(x,y)
+
