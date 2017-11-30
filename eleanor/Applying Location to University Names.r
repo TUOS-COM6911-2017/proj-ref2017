@@ -2,7 +2,7 @@
 
 # This thing creates a column of the regions corrosponding with the institute.
 Location= function(DatasetName){
-  Institution= Dataset$Institution 
+  Institution= DatasetName$Institution 
   ifelse(Institution %in% 
   c("Queen's University Belfast","St Mary's University College","Stranmillis University College","University of Ulster"), 
   "Northern Ireland", 
