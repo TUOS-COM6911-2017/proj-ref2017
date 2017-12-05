@@ -34,16 +34,40 @@ b) stars ranking per universities  - at first decide to do a range of stars for 
 ============================================================================================================
 
 14/11/2017
-Continue to work on previous IDEA - scatterplot of number of outputs vs % ranking of 4 stars, 3 stars
+Continue to work on IDEA 2 - scatterplot of number of outputs vs % ranking of 4 stars, 3 stars
 
 - Plot each count number of outputs per university versus 4* and 3* per university (use overall instead of outputs ranking alone)
 - Plots for both uploaded to this folder - to be discussed with Eleni & Thomas
 - Found out can use QGIS to populate raw data into map format - IDEA 1 from 12/11/2017
 
 17 - 19/11/2017
-- Install QGIS and figure out how to use this software. Lose time on installation (took 2 days!)
+- Install QGIS and figure out how to use this software. Lose time on installation (took 3 days!)
 - Spent time to learn how to download base map data for United Kingdom, and how to load them into QGIS. 
+
+==========================================================================================================
+
+21/11/2017
+Relook back at IDEA 2 - deeper understanding of output submissions count vs four stars ranking
+
+- Comment by Eleni - need to map four star of outputs ONLY not Overall and to add third dimension of data e.g. percentage of submission by university to the existing plot
+
+Relook back at IDEA 1 - mapping of data to map format
 - ISSUE - spent 1 whole day to load the data multiple times - too many data points since this covers the whole UK and cause my computer to crash many time
-- DECISION - decide to abandon this IDEA with respect of time - can be attempted again if time permits by loading smaller portion of data (perhaps by UK county)
+- DECISION - decide to abandon this IDEA with respect of time - can be attempted again (MAYBE) if time permits by loading smaller portion of data (perhaps by UK county)
+
+=========================================================================================================
+
+25/11/2017
+Searching for data to add as third dimension in response to Eleni's comment on 21/11/2017
+
+- Comment by Thomas - number of outputs submitted may not be normalized - may need to find data that represent number of submissions per person
+- Looking back to raw data - data available in raw data set - a) number of submission per university b) number of staff per university
+
+Notes for after discussion with Thomas & Eleni on 29/11/2017
+- Eleni mentioned normalization of data e.g. number of submission per university divided by number of staff per university would just confirmed REF rules (which is 4 outputs per staff) - NOT WORTH to proceed - SUGGEST to proceed finding other data could substantiate % of submitted data per university against overall staff (as mentioned in 21/11/2017)
+
+=======================================================================================================
+
+5/12/2017
 
 
