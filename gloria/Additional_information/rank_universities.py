@@ -25,3 +25,4 @@ overall.sort_values(['FourStar', 'ThreeStar', 'TwoStar', 'OneStar', 'Unclassifie
 # A dataframe containing output scores can also be obtained based on overall rank
 index_output_sortedbyoverall = np.array(overall.index.tolist()) - 1 
 output = submissionProfile.loc[index_output_sortedbyoverall]
+
