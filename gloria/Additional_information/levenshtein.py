@@ -18,4 +18,3 @@ def levdiff(strlist1, strlist2):
 #    avgdist = dist/(len(strlist1)*len(strlist2))
     avgratio = ratio/(len(strlist1)*len(strlist2))
     return avgratio
-
