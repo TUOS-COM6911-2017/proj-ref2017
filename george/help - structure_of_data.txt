@@ -1,0 +1,7 @@
+The file structure is:
+  - UOA
+    - Folder (Named by analysis performed)
+      - Data Required for python program to run
+      - Python Program with code for analysis
+    - General Data Used
+    
