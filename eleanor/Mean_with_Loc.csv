@@ -1,0 +1,155 @@
+"","Institution","FourStarMean","ThreeStarMean","TwoStarMean","OneStarMean","UnclassifiedMean","Region","Distance from London"
+"1","Aberystwyth University",16.05882353,46.11764706,31.29411765,6,0.529411765,"Wales",288.4
+"2","Anglia Ruskin University",6.466666667,36.13333333,42.06666667,12.86666667,2.466666667,"East England",64.3
+"3","Arts University Bournemouth",7,36,38,18,1,"South West England",150.2
+"4","Aston University",24.71428571,49.42857143,24,1.714285714,0.142857143,"West Midlands",162.6
+"5","Bangor University",24.35714286,50.21428571,21.42857143,3.214285714,0.785714286,"Wales",296.8
+"6","Bath Spa University",12.16666667,39,35.33333333,12.33333333,1.166666667,"South West England",161
+"7","Birkbeck College",27.85714286,45.85714286,22.85714286,3.071428571,0.357142857,"London",1.6
+"8","Birmingham City University",12,41.09090909,34.90909091,10.63636364,1.363636364,"West Midlands",162.7
+"9","Bishop Grosseteste University",6.666666667,16,50.66666667,23.33333333,3.333333333,"East England",195.3
+"10","Bournemouth University",17.5,44,34,4.25,0.25,"South West England",150
+"11","Brunel University London",16.14285714,44.85714286,31.42857143,6.666666667,0.904761905,"London",23.8
+"12","Buckinghamshire New University",6,28.75,45,16.25,4,"South East England",35.2
+"13","Canterbury Christ Church University",6.7,38.9,41.9,11.2,1.3,"South East England",88.4
+"14","Cardiff Metropolitan University",24,54.66666667,18.66666667,2,0.666666667,"Wales",212
+"15","Cardiff University",37.37037037,47.96296296,13.14814815,1.407407407,0.111111111,"Wales",211.4
+"16","City University London",20.58333333,51.91666667,23,3.416666667,1.083333333,"London",2.9
+"17","Courtauld Institute of Art",56,39,4,0,1,"London",0.9
+"18","Coventry University",12,48.11111111,32.55555556,7.111111111,0.222222222,"West Midlands",137.6
+"19","Cranfield University",26.66666667,50,22.33333333,1,0,"East England",72
+"20","De Montfort University",17.5,42.33333333,34.25,5.333333333,0.583333333,"East England",142.8
+"21","Edge Hill University",6.916666667,31.16666667,39,19.25,3.666666667,"North West England",294.5
+"22","Edinburgh Napier University",10.66666667,43,37.66666667,7.333333333,1.333333333,"Scotland",532.8666667
+"23","Falmouth University",7,21,48.5,16,7.5,"South West England",379.6666667
+"24","Glasgow Caledonian University",10.33333333,45,37.11111111,7.333333333,0.222222222,"Scotland",555.9
+"25","Glasgow School of Art",23,38,31,8,0,"Scotland",556.3
+"26","Glynd?r University",4,25.75,42,26.75,1.5,"Wales",260.8
+"27","Goldsmiths' College",22.53846154,44.84615385,29.30769231,2.769230769,0.538461538,"London",7.4
+"28","Guildhall School of Music & Drama",21,30,31,8,10,"London",2.8
+"29","Harper Adams University",10,46,44,0,0,"West Midlands",211.5
+"30","Heriot-Watt University",23.91666667,51.16666667,20.66666667,3.5,0.75,"Scotland",533.2
+"31","Heythrop College",22,40,36,2,0,"London",4.4
+"32","Imperial College London",46.71428571,46.14285714,6.571428571,0.5,0.071428571,"London",3.4
+"33","Institute of Cancer Research",52,41,6.5,0,0.5,"London",13.83333333
+"34","Institute of Zoology",22,68,10,0,0,"London",3.7
+"35","Keele University",17.88235294,47.88235294,30.23529412,3.352941176,0.647058824,"West Midlands",221.5
+"36","King's College London",38.66666667,45.18518519,14.14814815,1.62962963,0.37037037,"London",1
+"37","Kingston University",14.33333333,42.55555556,37.33333333,5.444444444,0.333333333,"London",16.82
+"38","Lancaster University",32.0625,50.25,15.8125,1.6875,0.1875,"North West England",331.232
+"39","Leeds Beckett University",5.454545455,21.90909091,41.90909091,27.18181818,3.545454545,"Yorkshire and the Humber",272.993
+"40","Leeds Trinity University",4,22.2,49.6,18.2,6,"Yorkshire and the Humber",280.071
+"41","Liverpool Hope University",5.166666667,28.91666667,41.5,22,2.416666667,"North West England",281.274
+"42","Liverpool John Moores University",11.94117647,49.76470588,33.52941176,3.823529412,0.941176471,"North West England",285.887
+"43","Liverpool School of Tropical Medicine",34.5,45.5,19,1,0,"North West England",286.244
+"44","London Business School",56,26,12,3,3,"London",3.095
+"45","London Metropolitan University",9.5,35,36.66666667,16.25,2.583333333,"London",5.068
+"46","London School of Economics and Political Science",46.35714286,39,12.85714286,1.285714286,0.5,"London",1.065
+"47","London School of Hygiene & Tropical Medicine",41.5,36,21,1,0.5,"London",1.518
+"48","London South Bank University",6.428571429,45.57142857,37.71428571,9.285714286,1,"London",2.049
+"49","Loughborough University",22,48.5,25.72222222,3.611111111,0.166666667,"East England",159.208
+"50","Manchester Metropolitan University",13,48.61538462,32.30769231,5.153846154,0.923076923,"North West England",261.234
+"51","Middlesex University",12.3,46.7,32.4,7.3,1.3,"London",11.515
+"52","Newcastle University",29.42857143,48.21428571,20.78571429,1.285714286,0.285714286,"North East England",398.95
+"53","Newman University",3.666666667,26.5,45.66666667,20.66666667,3.5,"West Midlands",164.323
+"54","Norwich University of the Arts",19,36,40,5,0,"East England",158.512
+"55","Nottingham Trent University",13.4375,39.5,37.5,8.5,1.0625,"East England",176.007
+"56","Open University",20.22222222,50.44444444,27.33333333,1.722222222,0.277777778,"South East England",70.151
+"57","Oxford Brookes University",13.11764706,42.23529412,36.76470588,7,0.882352941,"South East England",80.623
+"58","Queen's University Belfast",24.60714286,51.46428571,21.78571429,1.857142857,0.285714286,"Northern Ireland",517.695
+"59","Queen Margaret University Edinburgh",14,39.8,38,8.2,0,"Scotland",529.109
+"60","Queen Mary University of London",33.47619048,52.52380952,12.61904762,1.047619048,0.333333333,"London",6.333
+"61","Robert Gordon University",8.222222222,35.44444444,43.33333333,12.11111111,0.888888889,"Scotland",638.083
+"62","Roehampton University",20.69230769,43.30769231,30.23076923,5.615384615,0.153846154,"London",9.713
+"63","Rose Bruford College",7,42,30,15,6,"London",17.949
+"64","Royal Academy of Music",21,40,34,3,2,"London",2.438
+"65","Royal Agricultural University",3,4,39,38,16,"South West England",131.004
+"66","Royal Central School of Speech and Drama",39,31,25,4,1,"London",5.225
+"67","Royal College of Art",37,40,17,6,0,"London",3.637
+"68","Royal College of Music",34,39,22,4,1,"London",3.53
+"69","Royal Conservatoire of Scotland",26,41,26,6,1,"Scotland",556.148
+"70","Royal Holloway, University of London",30.35294118,50.58823529,17.17647059,1.470588235,0.411764706,"London",31.527
+"71","Royal Northern College of Music",36,39,22,3,0,"North West England",260.927
+"72","Royal Veterinary College",35,44,18,3,0,"London",3.264
+"73","School of Oriental and African Studies",25.45454545,42.72727273,27,3.909090909,0.909090909,"London",1.673
+"74","Sheffield Hallam University",17.27272727,46.18181818,29.90909091,6.181818182,0.454545455,"Yorkshire and the Humber",227.276
+"75","Southampton Solent University",2,17.25,35,29.25,16.5,"South East England",111.024
+"76","SRUC",42,32,23,3,0,"Scotland",530.758
+"77","St Mary's University College",0,0,20,67,13,"Northern Ireland",519.648
+"78","St Mary's University, Twickenham",10.85714286,20.85714286,35.14285714,29.14285714,4,"London",16.373
+"79","St.George's, University of London",30.5,45,23.5,1,0,"London",9.494
+"80","Staffordshire University",6,30,41.375,21.75,0.875,"West Midlands",217.759
+"81","Stranmillis University College",20,24,28,28,0,"Northern Ireland",516.918
+"82","Swansea University",27.94444444,47.55555556,22,2.222222222,0.277777778,"Wales",266.575
+"83","Teesside University",8.75,48.25,33.5,8,1.5,"North East England",348.96
+"84","The University of West London",8.2,17.8,36.4,35,2.6,"London",12.167
+"85","Trinity Laban Conservatoire of Music and Dance",18,50,24,8,0,"London",8.8
+"86","University College London",39,42.02777778,16,2.416666667,0.555555556,"London",1.964
+"87","University for the Creative Arts",17,47,29,5,2,"South East England",57.234
+"88","University of Aberdeen",22.4,50.76,23.08,3.52,0.24,"Scotland",642.605
+"89","University of Abertay Dundee",6.142857143,25.28571429,50,15,3.571428571,"Scotland",582.175
+"90","University of Bath",30.76923077,55.92307692,11.61538462,1.384615385,0.307692308,"South West England",153.283
+"91","University of Bedfordshire",13.81818182,31.36363636,40.81818182,12.18181818,1.818181818,"East England",45.632
+"92","University of Birmingham",29.45454545,52.54545455,15.81818182,1.787878788,0.393939394,"West Midlands",162.194
+"93","University of Bolton",5.285714286,21.14285714,39.42857143,25.71428571,8.428571429,"North West England",278.057
+"94","University of Bradford",22.14285714,46.28571429,26.85714286,3.285714286,1.428571429,"Yorkshire and the Humber",277.278
+"95","University of Brighton",18.7,45.7,30.1,5,0.5,"South East England",74.064
+"96","University of Bristol",33,46.22580645,18.70967742,1.935483871,0.129032258,"South West England",171.671
+"97","University of Cambridge",44.34375,40.90625,13.15625,1.3125,0.28125,"East England",79.354
+"98","University of Central Lancashire",8.25,40.3125,42.75,8.1875,0.5,"North West England",305.778
+"99","University of Chester",5.8125,21.9375,43.1875,24.25,4.8125,"North West England",266.463
+"100","University of Chichester",12.4,32.6,43.6,10.2,1.2,"South East England",86.503
+"101","University of Cumbria",6.833333333,26,47.5,18.66666667,1,"North West England",420.147
+"102","University of Derby",4.8,24.1,45.2,23.1,2.8,"East England",184.633
+"103","University of Dundee",24.2,45,26.5,3.6,0.7,"Scotland",581.813
+"104","University of Durham",33.13043478,49,16.13043478,1.347826087,0.391304348,"North East England",375.33
+"105","University of East Anglia",29.75,51.875,16.91666667,1.25,0.208333333,"East England",155.382
+"106","University of East London",14.15384615,41.69230769,34,9.692307692,0.461538462,"London",13.439
+"107","University of Edinburgh",34.5483871,44.90322581,18.29032258,2,0.258064516,"Scotland",533.382
+"108","University of Essex",29.28571429,48.21428571,20.78571429,1.571428571,0.142857143,"East England",84.865
+"109","University of Exeter",28.8,52.44,16.6,1.92,0.24,"South West England",253.016
+"110","University of Glasgow",28.125,49.59375,19.46875,2.625,0.1875,"Scotland",557.707
+"111","University of Gloucestershire",8.833333333,32.5,40.16666667,18.16666667,0.333333333,"South West England",141.575
+"112","University of Greenwich",8.315789474,33.05263158,42.47368421,13.94736842,2.210526316,"London",8.828
+"113","University of Hertfordshire",11.84615385,43.69230769,36.53846154,7.076923077,0.846153846,"East England",29.49
+"114","University of Huddersfield",13.61538462,43.84615385,35.46153846,6,1.076923077,"Yorkshire and the Humber",262.616
+"115","University of Hull",12.4375,45.6875,35.4375,5.9375,0.5,"Yorkshire and the Humber",252.811
+"116","University of Kent",23.34782609,47.60869565,25.56521739,3.043478261,0.434782609,"South East England",86.433
+"117","University of Leeds",32.6969697,49.63636364,15.87878788,1.727272727,0.060606061,"Yorkshire and the Humber",273.489
+"118","University of Leicester",20.04,53.92,23.32,2.44,0.28,"East England",141.513
+"119","University of Lincoln",11.35294118,38.35294118,38.76470588,9.882352941,1.647058824,"East England",193.671
+"120","University of Liverpool",25.07692308,52.65384615,19.65384615,2.538461538,0.076923077,"North West England",285.831
+"121","University of London Institute in Paris",0,22,25,38,15,"France",342.24
+"122","University of Manchester",32.88571429,48.37142857,16.94285714,1.4,0.4,"North West England",260.672
+"123","University of Northampton",4.333333333,26.11111111,47.33333333,18.44444444,3.777777778,"East England",99.713
+"124","University of Northumbria at Newcastle",13.8125,43.0625,37,6.0625,0.0625,"North East England",398.586
+"125","University of Nottingham",30.96875,47.0625,19.28125,1.90625,0.78125,"East England",175.164
+"126","University of Oxford",47.48387097,38.32258065,12.5483871,1.483870968,0.161290323,"South East England",82.576
+"127","University of Plymouth",15.33333333,48.27777778,31.61111111,3.666666667,1.111111111,"South West England",308.25
+"128","University of Portsmouth",14.46666667,46.86666667,34,4.266666667,0.4,"South East England",104.085
+"129","University of Reading",24.47826087,52,21.65217391,1.826086957,0.043478261,"South East England",56.919
+"130","University of Salford",10.07692308,40,39.76923077,8.307692308,1.846153846,"North West England",263.678
+"131","University of Sheffield",31.91428571,52.31428571,14.31428571,1.228571429,0.228571429,"Yorkshire and the Humber",228.064
+"132","University of South Wales",11.41666667,37,38.91666667,10.75,1.916666667,"Wales",221.901
+"133","University of Southampton",33,48.42307692,16.88461538,1.423076923,0.269230769,"South East England",109.014
+"134","University of St Andrews",31.3,49.75,17.4,1.45,0.1,"Scotland",565.69
+"135","University of Stirling",23.13333333,48.8,25.2,2.866666667,0,"Scotland",573.096
+"136","University of Strathclyde",24.58823529,50.23529412,22,2.764705882,0.411764706,"Scotland",555.361
+"137","University of Sunderland",5,23.07692308,44,25.07692308,2.846153846,"North East England",387.43
+"138","University of Surrey",20.53333333,50.66666667,25.26666667,3.333333333,0.2,"South East England",43.651
+"139","University of Sussex",24.5,49.95833333,23.29166667,1.833333333,0.416666667,"South East England",71.328
+"140","University of the Arts, London",31,52,15,2,0,"London",1.398
+"141","University of the Highlands and Islands",14,51.66666667,29.5,3.833333333,1,"Scotland",713.859
+"142","University of the West of England, Bristol",13.94117647,43.35294118,35.05882353,7.117647059,0.529411765,"South West England",167.666
+"143","University of the West of Scotland",6.888888889,37.88888889,42.11111111,12.22222222,0.888888889,"Scotland",541.29
+"144","University of Ulster",21.55,46.35,27.25,4.15,0.7,"Northern Ireland",617.004
+"145","University of Wales",26,39,29,6,0,"Wales",211.626
+"146","University of Wales Trinity Saint David",12.66666667,34.16666667,39.33333333,12.33333333,1.5,"Wales",279.989
+"147","University of Warwick",37.26086957,48.95652174,12.69565217,0.956521739,0.130434783,"West Midlands",138.198
+"148","University of Westminster",17.46153846,41.46153846,32,7.769230769,1.307692308,"London",1.502
+"149","University of Winchester",7,33.125,40.625,17.625,1.625,"South East England",97.193
+"150","University of Wolverhampton",8.846153846,31.53846154,44.92307692,12.07692308,2.615384615,"West Midlands",182.182
+"151","University of Worcester",5.181818182,28.72727273,41,21.63636364,3.454545455,"West Midlands",164.483
+"152","University of York",34.16666667,48,15.875,1.541666667,0.416666667,"Yorkshire and the Humber",278.534
+"153","Writtle College",0,15,21,29,35,"East England",46.113
+"154","York St John University",6,24.77777778,42,21.11111111,6.111111111,"Yorkshire and the Humber",280.997
