@@ -6,9 +6,6 @@ Location= function(DatasetName){
   ifelse(Institution %in% 
   c("Queen's University Belfast","St Mary's University College","Stranmillis University College","University of Ulster"), 
   "Northern Ireland", 
-  (ifelse(Institution %in% 
-  c("Open University"), 
-  "Distance Learning", 
   (ifelse(Institution %in%
   c("Anglia Ruskin University" ,"Cranfield University" ,"Norwich University of the Arts" ,"University of Bedfordshire" ,"University of Cambridge" ,"University of East Anglia" ,"University of Essex" ,"University of Hertfordshire" ,"Writtle College" ,"Bishop Grosseteste University" ,"De Montfort University" ,"Loughborough University" ,"Nottingham Trent University" ,"University of Derby" ,"University of Leicester" ,"University of Lincoln" ,"University of Northampton" ,"University of Nottingham"),
   "East England",
@@ -28,7 +25,7 @@ Location= function(DatasetName){
   c("Edinburgh Napier University","Glasgow Caledonian University","Glasgow School of Art","Heriot-Watt University","Queen Margaret University Edinburgh","Robert Gordon University","Royal Conservatoire of Scotland","SRUC","University of Aberdeen","University of Abertay Dundee","University of Dundee","University of Edinburgh","University of Glasgow","University of St Andrews","University of Stirling","University of Strathclyde","University of the Highlands and Islands","University of the West of Scotland"),
   "Scotland",
   (ifelse(Institution %in%
-  c("Buckinghamshire New University","Canterbury Christ Church University","Oxford Brookes University","Southampton Solent University","University for the Creative Arts","University of Brighton","University of Chichester","University of Kent","University of Oxford","University of Portsmouth","University of Reading","University of Southampton","University of Surrey","University of Sussex","University of Winchester"),
+  c("Buckinghamshire New University","Canterbury Christ Church University","Open University","Oxford Brookes University","Southampton Solent University","University for the Creative Arts","University of Brighton","University of Chichester","University of Kent","University of Oxford","University of Portsmouth","University of Reading","University of Southampton","University of Surrey","University of Sussex","University of Winchester"),
   "South East England",
   (ifelse(Institution %in%
   c("Arts University Bournemouth","Bath Spa University","Bournemouth University","Falmouth University","Royal Agricultural University","University of Bath","University of Bristol","University of Exeter","University of Gloucestershire","University of Plymouth","University of the West of England, Bristol"),  
