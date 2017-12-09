@@ -8,5 +8,9 @@ The file structure is:
           
       ----- Python Program with code for analysis
       
+          - Results Folder
+          ----- Results file as csv
+          ----- Graphs Produced from the results csv data
+      
       - General Data Used
     
