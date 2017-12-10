@@ -1,0 +1,188 @@
+---
+title: "Data Analysis for Economics & Econometrics"
+output: html_notebook
+---
+
+Initial Feature Analysis : Understanding impact of university with higher outputs submission to REF with regards to the 3 or 4 star ranking.
+
+Therefore, plot of number of outputs submitted by each university versus each star ranking is performed. 
+
+Note: Star score used below is for OUTPUT only
+```{r}
+# Plot number of outputs submitted vs four star ranking
+plot(Submissions_per_univ$freq, Output_Rank$FourStar, xlab = "Number of Output Submission Per University", ylab = "Four Star Score for Each University")
+
+# Calculate correlation coefficient
+cor(Submissions_per_univ$freq, Output_Rank$FourStar, method = 'spearman')
+
+# Checking the test assumptions to see if data evaluated are from normal distribution
+shapiro.test(Submissions_per_univ$freq)
+shapiro.test(Output_Rank$FourStar)
+
+```
+
+Correlation calculated is 0.02, confirmed low correlation between these two variables.
+
+Plot output submission number against three star ranking to confirm there is no linear relationship between these two variables. 
+
+```{r}
+# Plot number of outputs submitted vs three star ranking
+plot(Submissions_per_univ$freq, Output_Rank$ThreeStar, xlab = "Number of Output Submission Per University", ylab = "Three Star Score for Each University")
+
+# Calculate correlation coefficient
+cor(Submissions_per_univ$freq, Output_Rank$ThreeStar, method = 'spearman')
+
+```
+
+The same effect is observed when percentage of 3 and 4 star ranking is averaged. 
+
+```{r}
+# Plot number of outputs submitted vs average 3 or 4 star ranking
+plot(Submissions_per_univ$freq, Output_Rank$avg3_4star, xlab = "Number of Output Submission Per University", ylab = "Average Three & Four Star Score for Each University")
+
+# Calculate correlation coefficient
+cor(Submissions_per_univ$freq, Output_Rank$avg3_4star, method = 'spearman')
+
+```
+
+After discussion and feedback from Thomas & Eleni, the suggestion is to see if the score is affected by the submitted FTE data. 
+
+New Feature Analysis: Since number of output submission is dependant on FTE submitted by each university, to evaluate whether there is an impact to output star ranking based on the submitted FTE and eligible approximated calculated FTE data by HESA.
+
+
+```{r}
+# Checking distribution of below data (if it is Normal)
+shapiro.test(FTE$TotalCategoryAFte)
+shapiro.test(FTE$`Scaled FTE 
+of eligible staff`)
+
+# Plot of submitted FTE vs 4 star ranking
+plot (FTE$TotalCategoryAFte, Output_Rank$FourStar, xlab = "Submitted FTE (Category A)", ylab = "Four Star Score for Each University")
+
+# Calculate correlation between submitted FTE vs 4 star ranking
+cor(FTE$TotalCategoryAFte, Output_Rank$FourStar, method = 'spearman')
+
+```
+```{r}
+# Plot of eligible FTE vs 4 star ranking
+plot(FTE$`Scaled FTE 
+of eligible staff`, Output_Rank$FourStar, xlab = "Eligible FTE by HESA", ylab = "Four Star Score for Each University")
+
+# Calculate correlation between eligible FTE vs 4 star ranking
+cor(FTE$`Scaled FTE 
+of eligible staff`, Output_Rank$FourStar, use = "complete.obs", method = 'spearman')
+
+```
+
+```{r}
+# Plot of submitted FTE vs 3 star ranking
+plot(FTE$TotalCategoryAFte, Output_Rank$ThreeStar, xlab = "Submitted FTE", ylab = "Three Star Score for Each University")
+
+cor(FTE$TotalCategoryAFte, Output_Rank$ThreeStar, method = 'spearman')
+```
+```{r}
+# Plot of eligible FTE vs average 3 star ranking
+plot(FTE$`Scaled FTE 
+of eligible staff`, Output_Rank$ThreeStar, xlab = "Eligible FTE by HESA", ylab = "Three Star Score for Each University")
+
+cor(FTE$`Scaled FTE 
+of eligible staff`, Output_Rank$ThreeStar, method = 'spearman', use = 'complete.obs')
+```
+
+Construct 3D plot between Variables, where x is eligible FTE provided by HESA, y is the star ranking and z is submitted FTE by university.
+
+```{r}
+# Install packages to draw 3D scatter plot
+#install.packages("scatterplot3d")
+library(scatterplot3d)
+```
+
+```{r}
+# Setting variables x, y and z
+x <- FTE$`Scaled FTE 
+of eligible staff`
+
+y1<- Output_Rank$FourStar
+
+z <- FTE$TotalCategoryAFte
+
+```
+
+```{r}
+# Construct 3D scatterplot with coloring and regression plane
+s3d1 <- scatterplot3d::scatterplot3d(x = x, y = y1, z = z, axis = TRUE, color = 'BLUE', pch = 20, xlab = "Approximate Eligible FTE by HESA", ylab = "Four Star Output Score Per University", zlab = "Submitted FTE per University (Category A)")
+
+fit <- lm(z ~ x + y1)
+
+s3d1$plane3d(fit)
+
+# Calculate multiple correlation coefficient
+# Initialize 
+n = 28
+Multi <- data.frame(X = integer(n),
+                    Y = numeric(n),
+                    Z = numeric(n))
+Multi$X <- x
+Multi$Y <- y1
+Multi$Z <- z
+
+cor(Multi, use = "complete.obs", method = 'spearman')
+
+```
+
+```{r}
+# Setting variables y for three star ranking
+y2<- Output_Rank$ThreeStar
+
+# Construct 3D scatterplot with coloring and regression plane
+s3d2 <- scatterplot3d::scatterplot3d(x = x, y = y2, z = z, axis = TRUE, color = 'BLUE', pch = 20, xlab = "Approximate Eligible FTE by HESA", ylab = "Three Star Output Score Per University", zlab = "Submitted FTE per University (Category A)")
+
+fit <- lm(z ~ x + y2)
+
+s3d2$plane3d(fit)
+
+# Calculate multiple correlation coefficient
+# Initialize 
+n = 28
+Multi <- data.frame(X = integer(n),
+                    Y = numeric(n),
+                    Z = numeric(n))
+Multi$X <- x
+Multi$Y <- y2
+Multi$Z <- z
+
+cor(Multi, use = "complete.obs", method = 'spearman')
+
+```
+
+To look at multiple correlation coefficient for ranking four star, output submission, and submitted FTE
+
+```{r}
+# Setting variables x, y and z 
+x <- FTE$TotalCategoryAFte
+
+y<- Output_Rank$FourStar
+
+z <- Submissions_per_univ$freq
+```
+
+```{r}
+# Construct 3D scatterplot with coloring and regression plane
+s3d3 <- scatterplot3d::scatterplot3d(x = x, y = y, z = z, axis = TRUE, color = 'BLUE', pch = 20, xlab = "Approximate Eligible FTE by HESA", ylab = "Three Star Output Score Per University", zlab = "Submitted FTE per University (Category A)")
+
+fit <- lm(z ~ x + y)
+
+s3d3$plane3d(fit)
+
+# Calculate multiple correlation coefficient
+# Initialize 
+n = 28
+Multi <- data.frame(X = integer(n),
+                    Y = numeric(n),
+                    Z = numeric(n))
+Multi$X <- x
+Multi$Y <- y
+Multi$Z <- z
+
+cor(Multi, use = "complete.obs", method = 'spearman')
+```
