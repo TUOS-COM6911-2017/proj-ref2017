@@ -6,6 +6,8 @@ How to read my data files structure:-
 
 NOTE - https://github.com/rstudio/rmarkdown/issues/1020 (due to current issues with Git, it didn't properly render R Notebook outputs (files that has .nb.html format is the one that have results) 
 
+NOTE - Eligible FTE data that are used with all UOAs is located in "UOA_ComScience" folder
+
 ======
 Rawaida's Notes & Recording My Progress for this project
 ======
