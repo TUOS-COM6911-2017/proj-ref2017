@@ -4,6 +4,8 @@ How to read my data files structure:-
 - In each UOA's folder, two R Notebooks are uploaded (1 for Data Wrangling, 1 for Data Analysis), raw CSV data used for each UOAs
 - The rest of unscattered files are documents with respect to business analysis prior to start of the works, and initial plots obtained during the initial analysis
 
+NOTE - https://github.com/rstudio/rmarkdown/issues/1020 (due to current issues with Git, it didn't properly render R Notebook outputs (files that has .nb.html format is the one that have results) 
+
 ======
 Rawaida's Notes & Recording My Progress for this project
 ======
