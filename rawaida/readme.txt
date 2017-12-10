@@ -1,4 +1,12 @@
+How to read my data files structure:-
+- Latest scripts are organized per UOAs (Unit of Assessments) in REF 2014
+- 10 UOAs (not including Politics) are treated as sample and analysis were conducted on data related to FTE (Full-Time Equivalent)
+- In each UOA's folder, two R Notebooks are uploaded (1 for Data Wrangling, 1 for Data Analysis), raw CSV data used for each UOAs
+- The rest of unscattered files are documents with respect to business analysis prior to start of the works, and initial plots obtained during the initial analysis
+
+======
 Rawaida's Notes & Recording My Progress for this project
+======
 
 Project Allocated on 9/10/2017
 First Presentation on 24/10/2017
