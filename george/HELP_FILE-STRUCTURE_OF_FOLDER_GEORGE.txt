@@ -1,4 +1,4 @@
-The file structure is:
+The folder structure is:
 
   - UOA Folder
   
