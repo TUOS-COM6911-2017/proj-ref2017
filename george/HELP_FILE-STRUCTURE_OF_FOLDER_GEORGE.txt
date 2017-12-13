@@ -1,6 +1,6 @@
 The file structure is:
 
-  - UOA
+  - UOA Folder
   
       - Folder (Named by analysis performed)
     
@@ -13,4 +13,13 @@ The file structure is:
           ----- Graphs Produced from the results csv data
       
       - General Data Used
+  - Draft Report
+  
+      - Contains text & files for initial draft report
+      
+  - Text in the final Report
+  
+      - Contains the text included in the final report
+      
+     
     
